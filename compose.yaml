@@ -1,0 +1,10 @@
+services:
+  dashboard:
+    build: .
+    ports:
+      - "3000:3000"
+    volumes:
+      - election-history:/app/data
+    restart: unless-stopped
+volumes:
+  election-history:
